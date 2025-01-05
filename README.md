@@ -20,3 +20,7 @@ A loading screen will appear before the quiz starts.
 Answer the multiple-choice questions before the timer runs out.
 Track your progress with the progress bar.
 View your score and rank at the end of the quiz.
+# Future Enhancements
+Add more question categories (e.g., pop culture, video games).
+Implement a leaderboard to track high scores.
+Allow users to select difficulty levels.
