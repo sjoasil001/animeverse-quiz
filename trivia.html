@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Trivia</title>
+  <link rel="stylesheet" href="trivia.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&family=Rock+Salt&family=Rubik+Vinyl&family=Sixtyfour&display=swap" rel="stylesheet">
+</head>
+<body class="trivia">
+
+
+  <div id="loading-screen">
+    <div class="loader">
+      <img src="fish.svg" alt="Loading...">
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  
+
+
+  <!-- Quiz Container -->
+  <div id="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
+  
+
+  <div id="quiz-container" class="hidden">
+    <h2 id="question-header"></h2>
+    <div id="timer">
+      <img src="clock2.svg" alt="Clock Icon" class="clock-icon"> 
+      <span id="time-left">15s</span>
+    </div>
+    <p id="question-text"></p>
+    <div id="options-container">
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+    </div>
+  </div>
+
+  
+  
+
+  <script>
+    window.addEventListener("load", () => {
+      const loadingScreen = document.getElementById("loading-screen");
+      const quizContainer = document.getElementById("quiz-container");
+  
+      // Simulate a loading delay
+      setTimeout(() => {
+        loadingScreen.classList.add("hidden");
+        quizContainer.classList.remove("hidden");
+      }, 2000); // Adjust delay as needed
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

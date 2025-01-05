@@ -1,0 +1,229 @@
+.hidden {
+  display: none !important;
+}
+
+h1 {
+  font-family: 'Lato', serif;
+  font-size: 75px;
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  font-family: 'Caveat', serif;
+  text-align:center;
+  font-size: 62px;
+  color: white;
+  margin-top: 10px;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  text-align: center;
+}
+
+.loader img {
+  width: 100px;
+  height: 100px;
+  animation: spin 1s infinite linear;
+}
+
+.loader p {
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  color: white;
+  margin-top: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body.trivia {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white; /* Set the default text color to white for visibility */
+  font-family: 'Caveat', sans-serif; /* Use an engaging font */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+button.option:hover {
+  background-color: #FFD700;
+  color: black;
+}
+
+button.submit {
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.submit:hover {
+  background-color: white;
+  color: #FFD700;
+}
+
+#quiz-container {
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Glow effect */
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+}
+
+#question-text {
+  font-size: 2rem; /* Large question text */
+  color: white;
+  margin-bottom: 30px;
+}
+
+#options-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 15px; /* Space between options */
+  justify-items: center;
+  font-family: 'Rock Salt', serif;
+
+}
+
+button.option {
+  background-color: #444;
+  color: white;
+  border: 2px solid #FFD700;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%; /* Make options fill available space */
+  max-width: 300px; /* Prevent buttons from being too wide */
+  text-align: center;
+}
+
+button.option:hover {
+  background-color: #FFD700;
+  color: black;
+}
+
+
+#progress-bar-container {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 20px;
+  margin-bottom: 20px; /* Space below the bar */
+  overflow: hidden; /* Prevents overflow of the inner bar */
+}
+
+#progress-bar {
+  width: 0%; /* Initial progress */
+  height: 100%;
+  background-color: #FFD700; /* Gold color for the bar */
+  transition: width 0.5s ease; /* Smooth animation */
+  box-shadow: 0 0 15px #ffd700;
+}
+#timer {
+  position: absolute;
+  top: 230px;
+  right: 340px;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.clock-icon {
+  width: 20px;
+  height: 20px;
+  
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+#timer.shake {
+  animation: shake 0.5s;
+  box-shadow: 0 0 15px red;
+}
+
+.restart-btn {
+  background-color: #FFD700; /* Gold */
+  color: black;
+  border: 2px solid white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-family: 'Lato', serif;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.restart-btn:hover {
+  background-color: white;
+  color: #FFD700;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+.restart-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.score-text {
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold;
+  color: #FFD700; /* Gold color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rank-text {
+  font-size: 2rem; /* Slightly smaller than score */
+  font-weight: bold;
+  color: #FFFFFF; /* White color */
+  text-align: center;
+  margin-bottom: 30px;
+}
