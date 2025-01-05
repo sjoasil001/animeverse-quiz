@@ -24,3 +24,7 @@ View your score and rank at the end of the quiz.
 Add more question categories (e.g., pop culture, video games).
 Implement a leaderboard to track high scores.
 Allow users to select difficulty levels.
+# License
+This project is licensed under the MIT License.
+
+
