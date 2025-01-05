@@ -14,7 +14,7 @@ HTML: For the structure of the web pages
 CSS: For styling and animations
 JavaScript: For dynamic functionality and game logic
 GitHub Pages: (Optional) For hosting the project online
-How to Play
+# How to Play
 Click the Play button on the homepage.
 A loading screen will appear before the quiz starts.
 Answer the multiple-choice questions before the timer runs out.
